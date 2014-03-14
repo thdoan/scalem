@@ -1,5 +1,5 @@
 /*!
-* Scalem v1.0 - A responsive text jQuery plugin
+* Scalem v1.0.2 - A responsive text jQuery plugin
 * Copyright 2014, Tom Doan (http://www.tohodo.com/)
 *
 * Scalem by Tom Doan is licensed under the MIT License.
@@ -10,14 +10,18 @@
 (function($) {
   $.fn.scalem = function(oOptions) {
     var oSettings = $.extend({
-        ratio: .5,
+        ratio: .5,        /* Scale ratio (1 = 100%) */
         reference: null,  /* Text will scale relative to this element */
-        styles: ''  /* List of styles to scale (useful for buttons) */
+        styles: ''        /* List of styles to scale (useful for buttons) */
       }, oOptions),
-      setFontSize = function(o, e) {
+      updateStyles = function(o, e) {
         var $o = $(o),
           /* Create clone to get true text width */
-          $o2 = $o.clone().css({'display':'none', 'white-space':'nowrap'}),
+          $o2 = $o.clone().css({
+            'width': 'auto',
+            'display': 'none',
+            'white-space': 'nowrap'
+          }),
           /* If data attribute exists, use that instead */
           $ref = o.getAttribute('data-scale-reference') ? $(o.getAttribute('data-scale-reference')) : $(oSettings.reference),
           /* Array of styles to scale */
@@ -27,16 +31,21 @@
           /* Reference width (set to parent width by default) */
           nRefWidth = ($ref.length > 0) ? $ref.width() : $o.parent().width(),
           nTargetWidth = nRefWidth * nRatio,
-          /* Text font size */
+          /* Text width */
           nTextWidth;
-        // Append clone to body to get true inline width
+        // Append clone to body to get inline width
         $o2.appendTo('body');
         nTextWidth = $o2.width();
         // Exit if something doesn't look right
-        if (nTargetWidth === 0 || nTextWidth === nRefWidth) return;
+        if (nTargetWidth === 0 || nTextWidth === nRefWidth) {
+          $o2.remove();
+          return;
+        }
         // Scale the text! (6px is minimum font size to get accurate ratio)
-        for (var i=Math.round((6/$o2.css('font-size', '6px').width())*nTargetWidth); i<nTargetWidth; i++) {
-          $o2.css('font-size', i + 'px');
+        for (var i=Math.round((6/$o2.css('font-size', '6px').width())*nTargetWidth), o2=$o2[0]; i<nTargetWidth; i++) {
+          // Update font-size using native method for better performance
+          // (see http://jsperf.com/style-vs-csstext-vs-setattribute)
+          o2.style.fontSize = i + 'px';
           if ($o2.width() / nRefWidth > nRatio) {
             $o.css('font-size', (i - 1) + 'px');
             break;
@@ -58,12 +67,12 @@
     return this.each(function() {
       // This scope required for resize handler
       var o = this;
-      // Update font size upon resize
+      // Update CSS styles upon resize
       $(window).resize(function(e) {
-        setFontSize(o, e);
+        updateStyles(o, e);
       });
       // Set font size on load
-      setFontSize(o);
+      updateStyles(o);
     });
   };
 }(jQuery));
