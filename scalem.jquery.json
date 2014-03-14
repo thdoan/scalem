@@ -1,0 +1,29 @@
+{
+  "name": "scalem",
+  "title": "jQuery Scalem",
+  "description": "A light-weight jQuery plugin to make any element scalable (responsive).",
+  "keywords": [
+    "liquid",
+    "responsive",
+    "scalable"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Tom Doan",
+    "url": "http://www.tohodo.com/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/thdoan/scalable-text/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://thdoan.github.io/scalem/",
+  "demo": "http://thdoan.github.io/scalem/demo.html",
+  "docs": "https://github.com/thdoan/scalem",
+  "bugs": "https://github.com/thdoan/scalem/issues",
+  "download": "https://github.com/thdoan/scalem/archive/v1.0.0.zip",
+  "dependencies": {
+    "jquery": "*"
+  }
+}
