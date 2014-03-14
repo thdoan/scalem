@@ -7,7 +7,7 @@
     "responsive",
     "scalable"
   ],
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": {
     "name": "Tom Doan",
     "url": "http://www.tohodo.com/"
@@ -22,7 +22,7 @@
   "demo": "http://thdoan.github.io/scalem/demo.html",
   "docs": "https://github.com/thdoan/scalem",
   "bugs": "https://github.com/thdoan/scalem/issues",
-  "download": "https://github.com/thdoan/scalem/archive/v1.0.0.zip",
+  "download": "https://github.com/thdoan/scalem/archive/v1.0.2.zip",
   "dependencies": {
     "jquery": "*"
   }
