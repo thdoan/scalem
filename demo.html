@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Tom Doan">
+<title>Scalable Text Demo</title>
+<style type="text/css">
+.bar-red {
+width:60%;
+background:#f00;
+float:left;
+}
+.bar-blue {
+width:40%;
+background:#00f;
+color:#fff;
+float:right;
+}
+.btn {
+border:3px solid #666;
+border-radius:15px;
+padding:.75em 1.5em;
+}
+</style>
+</head>
+<body>
+
+<p>Try resizing this window...</p>
+
+<!-- data-scale-ratio="1" means 100% the width of the document;
+     the default scale ratio is .5, or 50% -->
+<h1 data-scale-ratio="1">Responsive Heading</h1>
+
+<div class="bar-red">60%</div>
+<div class="bar-blue">40%</div>
+<br clear="both">
+
+<p id="text" data-scale-ratio="1" data-scale-reference=".bar-red">
+  This text scales with the red bar above.
+</p>
+
+<p>
+  <button class=".btn">A Scalable Button!</button>
+</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="javascripts/jquery.scalem.js"></script>
+<script>
+$(document).ready(function() {
+  // Make text responsive using data attributes
+  $('h1').scalem();
+  $('#text').scalem();
+  // Make button responsive using options
+  $('button').scalem({
+    ratio: .25,
+    styles: 'border-radius border-width'
+  });
+});
+
+// Google Analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-2843793-6', 'thdoan.github.io');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
