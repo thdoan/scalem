@@ -1,5 +1,5 @@
-Scalem
-======
+Scalem JS
+=========
 
 Scalem, short for __scale elements__ or slang for __scale 'em__, is a light-weight responsive text jQuery plugin inspired by [FlowType](http://simplefocus.com/flowtype/). Use it to "liquify" elements on your website so that they scale relative to the width of their parent element or, optionally, any element you specify (see Options below). Scalem is not just limited to text size&mdash;it can be used to scale any CSS style that takes a numeric unit such as px, em, or %.
 
