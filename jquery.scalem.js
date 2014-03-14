@@ -1,5 +1,5 @@
 /*!
-* Scalem v1.0.1 - A responsive text jQuery plugin
+* Scalem v1.0.2 - A responsive text jQuery plugin
 * Copyright 2014, Tom Doan (http://www.tohodo.com/)
 *
 * Scalem by Tom Doan is licensed under the MIT License.
@@ -20,7 +20,7 @@
           $o2 = $o.clone().css({
             'width': 'auto',
             'display': 'none',
-            'white-space':'nowrap'
+            'white-space': 'nowrap'
           }),
           /* If data attribute exists, use that instead */
           $ref = o.getAttribute('data-scale-reference') ? $(o.getAttribute('data-scale-reference')) : $(oSettings.reference),
@@ -42,8 +42,10 @@
           return;
         }
         // Scale the text! (6px is minimum font size to get accurate ratio)
-        for (var i=Math.round((6/$o2.css('font-size', '6px').width())*nTargetWidth); i<nTargetWidth; i++) {
-          $o2.css('font-size', i + 'px');
+        for (var i=Math.round((6/$o2.css('font-size', '6px').width())*nTargetWidth), o2=$o2[0]; i<nTargetWidth; i++) {
+          // Update font-size using native method for better performance
+          // (see http://jsperf.com/style-vs-csstext-vs-setattribute)
+          o2.style.fontSize = i + 'px';
           if ($o2.width() / nRefWidth > nRatio) {
             $o.css('font-size', (i - 1) + 'px');
             break;
