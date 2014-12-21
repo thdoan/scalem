@@ -1,0 +1,27 @@
+{
+  "name": "scalem",
+  "title": "jQuery Scalem",
+  "version": "1.0.2",
+  "description": "A lightweight jQuery plugin to make any element scalable (responsive).",
+  "keywords": [
+    "jquery-plugin",
+    "liquid",
+    "responsive",
+    "scalable"
+  ],
+  "homepage": "http://thdoan.github.io/scalem/",
+  "bugs": {
+    "url": "https://github.com/thdoan/scalem/issues"
+  },
+  "license": "MIT",
+  "author": "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com/)",
+  "main": "jquery.scalem.js",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "demo": "http://thdoan.github.io/scalem/demo.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thdoan/scalem.git"
+  }
+}
