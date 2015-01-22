@@ -47,7 +47,10 @@
           // (see http://jsperf.com/style-vs-csstext-vs-setattribute)
           o2.style.fontSize = i + 'px';
           if ($o2.width() / nRefWidth > nRatio) {
-            $o.css('font-size', (i - 1) + 'px');
+            $o.css({
+              'font-size', (i - 1) + 'px',
+              'white-space', 'nowrap'
+            });
             break;
           }
         }
