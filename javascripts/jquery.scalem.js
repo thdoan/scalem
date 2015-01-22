@@ -16,6 +16,7 @@
       }, oOptions),
       updateStyles = function(o, e) {
         var $o = $(o),
+          $oP = $o.parent(),
           /* Create clone to get true text width */
           $o2 = $o.clone().css({
             'width': 'auto',
@@ -29,10 +30,13 @@
           /* Scale ratio */
           nRatio = parseFloat(o.getAttribute('data-scale-ratio')) || oSettings.ratio,
           /* Reference width (set to parent width by default) */
-          nRefWidth = ($ref.length > 0) ? $ref.width() : $o.parent().width(),
-          nTargetWidth = nRefWidth * nRatio,
+          nRefWidth = ($ref.length) ? $ref.width() : $oP.width(),
+          nTargetWidth,
           /* Text width */
           nTextWidth;
+        // Account for scrollbar?
+        if ($oP[0].scrollHeight>$oP.height()) nRefWidth -= 17;
+        nTargetWidth = nRefWidth * nRatio;
         // Append clone to body to get inline width
         $o2.appendTo('body');
         nTextWidth = $o2.width();
@@ -47,10 +51,7 @@
           // (see http://jsperf.com/style-vs-csstext-vs-setattribute)
           o2.style.fontSize = i + 'px';
           if ($o2.width() / nRefWidth > nRatio) {
-            $o.css({
-              'font-size': (i - 1) + 'px',
-              'white-space': 'nowrap'
-            });
+            $o.css('font-size', (i-1) + 'px');
             break;
           }
         }
