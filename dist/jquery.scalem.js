@@ -1,5 +1,5 @@
 /*!
-* Scalem v1.0.4 - A responsive text jQuery plugin
+* Scalem v1.0.5 - A responsive text jQuery plugin
 * Copyright 2014, Tom Doan (http://www.tohodo.com/)
 *
 * Scalem by Tom Doan is licensed under the MIT License.
