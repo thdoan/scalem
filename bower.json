@@ -5,7 +5,10 @@
   "main": "dist/jquery.scalem.js",
   "license": "MIT",
   "ignore": [
-    "**/*"
+    "**/.*",
+    "*.json",
+    "LICENSE",
+    "README.md"
   ],
   "keywords": [
     "jquery-plugin",
