@@ -6,7 +6,7 @@ Scalem, short for __scale elements__ or slang for __scale 'em__, is a light-weig
 
 ## Options
 
-Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name to 'data-scale-', as in `data-scale-ratio="1"`.
+Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name after "data-scale-", as in `data-scale-ratio="1"`.
 
 Name        | Type   | Default | Description
 ----------- | ------ | ------- | -----------
