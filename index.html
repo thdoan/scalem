@@ -2,13 +2,13 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Scalem : A jQuery plugin to make any element scalable (responsive)." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Scalem : A jQuery plugin to make any element scalable (responsive).">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>jQuery Scalem Plugin : Responsive, Scalable Liquid Text</title>
+    <title>Scalem</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/thdoan/scalem">View on GitHub</a>
 
-          <h1 id="project_title">Scalem JS</h1>
+          <h1 id="project_title">Scalem</h1>
           <h2 id="project_tagline">A jQuery plugin to make any element scalable (responsive).</h2>
 
             <section id="downloads">
@@ -31,27 +31,34 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        <h1>
+<a id="scalem-js" class="anchor" href="#scalem-js" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scalem JS</h1>
 
-<p>Scalem, short for <strong>scale elements</strong> or slang for <strong>scale 'em</strong>, is a light-weight responsive text jQuery plugin inspired by <a href="http://simplefocus.com/flowtype/">FlowType</a>. Use it to "liquify" elements on your website so that they scale relative to the width of their parent element or, optionally, any element you specify (see Options below). Scalem is not just limited to text size&mdash;it can be used to scale any CSS style that takes a numeric unit such as px, em, or %.</p>
-<p><strong>UPDATE:</strong> You can now install Scalem through the npm package manager by issuing the command <code>npm install scalem</code>.</p>
+<p>Scalem, short for <strong>scale elements</strong> or slang for <strong>scale 'em</strong>, is a light-weight responsive text jQuery plugin inspired by <a href="http://simplefocus.com/flowtype/">FlowType</a>. Use it to "liquify" elements on your website so that they scale relative to the width of their parent element or, optionally, any element you specify (see Options below). Scalem is not just limited to text size—it can be used to scale any CSS style that takes a numeric unit such as px, em, or %.</p>
+
+<h3>
+<a id="see-a-demo-" class="anchor" href="#see-a-demo-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://thdoan.github.io/scalem/demo.html">See a demo »</a>
+</h3>
 
 <h2>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
 
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-scale-</code>, as in <code>data-scale-ratio="1"</code>.</p>
+<p>Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name after "data-scale-", for example <code>data-scale-ratio="1"</code>.</p>
 
 <table>
-<thead><tr>
+<thead>
+<tr>
 <th>Name</th>
 <th>Type</th>
 <th>Default</th>
 <th>Description</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr>
 <td><code>ratio</code></td>
 <td>number</td>
-<td>.5</td>
+<td>0.5</td>
 <td>Scale ratio, where 1 scales the element to 100% the width of the reference element.</td>
 </tr>
 <tr>
@@ -67,37 +74,48 @@
 <td>Space-separated list of CSS properties to scale in addition to font-size.</td>
 </tr>
 </tbody>
-</table><h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+</table>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;body&gt;</span>
-<span class="nt">&lt;h1&gt;</span>Scalable Heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"txt"</span> <span class="na">data-scale-ratio=</span><span class="s">".25"</span><span class="nt">&gt;</span>
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">body</span>&gt;
+&lt;<span class="pl-ent">h1</span>&gt;Scalable Heading&lt;/<span class="pl-ent">h1</span>&gt;
+&lt;<span class="pl-ent">p</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>txt<span class="pl-pds">"</span></span> <span class="pl-e">data-scale-ratio</span>=<span class="pl-s1"><span class="pl-pds">"</span>.25<span class="pl-pds">"</span></span>&gt;
   Scalable Text
-<span class="nt">&lt;p&gt;</span>
-<span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Scalable Button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;
+  &lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>btn<span class="pl-pds">"</span></span>&gt;Scalable Button&lt;/<span class="pl-ent">button</span>&gt;
+&lt;/<span class="pl-ent">p</span>&gt;
 ...
-<span class="nt">&lt;script&gt;</span>
-<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Scale heading using default options</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">).</span><span class="nx">scalem</span><span class="p">();</span>
-  <span class="c1">// Scale text to 25% of the document's width using data attribute</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'#txt'</span><span class="p">).</span><span class="nx">scalem</span><span class="p">();</span>
-  <span class="c1">// Scale button to 100% the width of the &lt;h1&gt;, while also keeping its</span>
-  <span class="c1">// border ratio and width proportionate, by passing object properties</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'.btn'</span><span class="p">).</span><span class="nx">scalem</span><span class="p">({</span>
-    <span class="nx">ratio</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nx">reference</span><span class="o">:</span> <span class="s1">'h1'</span><span class="p">,</span>
-    <span class="nx">styles</span><span class="o">:</span> <span class="s1">'border-radius border-width'</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-</pre></div>
+<span class="pl-s2">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">$(<span class="pl-s3">document</span>).ready(<span class="pl-st">function</span>() {</span>
+<span class="pl-s2">  <span class="pl-c">// Scale heading using default options</span></span>
+<span class="pl-s2">  $(<span class="pl-s1"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>).scalem();</span>
+<span class="pl-s2">  <span class="pl-c">// Scale text to 25% of the document's width using data attribute</span></span>
+<span class="pl-s2">  $(<span class="pl-s1"><span class="pl-pds">'</span>#txt<span class="pl-pds">'</span></span>).scalem();</span>
+<span class="pl-s2">  <span class="pl-c">// Scale button to 100% the width of the &lt;h1&gt;, while also keeping its</span></span>
+<span class="pl-s2">  <span class="pl-c">// border ratio and width proportionate, by passing object properties</span></span>
+<span class="pl-s2">  $(<span class="pl-s1"><span class="pl-pds">'</span>.btn<span class="pl-pds">'</span></span>).scalem({</span>
+<span class="pl-s2">    ratio<span class="pl-k">:</span> <span class="pl-c1">1</span>,</span>
+<span class="pl-s2">    reference<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s2">    styles<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>border-radius border-width<span class="pl-pds">'</span></span></span>
+<span class="pl-s2">  });</span>
+<span class="pl-s2">}</span>
+<span class="pl-s2">&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;</pre></div>
 
-<p><a href="http://thdoan.github.io/scalem/demo.html"><strong>See a demo »</strong></a></p>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Choose one of the following methods:</p>
+
+<ul>
+<li><code>git clone https://github.com/thdoan/scalem.git</code></li>
+<li><code>bower install scalem</code></li>
+<li><code>npm install scalem</code></li>
+<li><a href="https://github.com/thdoan/scalem/archive/master.zip">Download ZIP</a></li>
+</ul>
       </section>
     </div>
 
