@@ -7,7 +7,8 @@
     "jquery-plugin",
     "liquid",
     "responsive",
-    "scalable"
+    "scalable",
+    "fluid-text"
   ],
   "homepage": "http://thdoan.github.io/scalem/",
   "bugs": {
@@ -15,11 +16,10 @@
   },
   "license": "MIT",
   "author": "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com/)",
-  "main": "jquery.scalem.js",
+  "main": "dist/jquery.scalem.js",
   "dependencies": {
-    "jquery": "*"
+    "jquery": ">=1.7.0"
   },
-  "demo": "http://thdoan.github.io/scalem/demo.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/thdoan/scalem.git"
