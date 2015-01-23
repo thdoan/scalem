@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 Choose one of the following methods:
 
-- [Clone in Desktop](github-windows://openRepo/https://github.com/thdoan/scalem)
-- [Download ZIP](https://github.com/thdoan/scalem/archive/master.zip)
+- `git clone https://github.com/thdoan/scalem.git`
 - `bower install scalem`
 - `npm install scalem`
+- [Download ZIP](https://github.com/thdoan/scalem/archive/master.zip)
