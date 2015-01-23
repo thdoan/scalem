@@ -6,11 +6,11 @@ Scalem, short for __scale elements__ or slang for __scale 'em__, is a light-weig
 
 ## Options
 
-Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name to `data-scale-`, as in `data-scale-ratio="1"`.
+Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name to 'data-scale-', as in `data-scale-ratio="1"`.
 
 Name        | Type   | Default | Description
 ----------- | ------ | ------- | -----------
-`ratio`     | number | .5      | Scale ratio, where 1 scales the element to 100% the width of the reference element.
+`ratio`     | number | 0.5     | Scale ratio, where 1 scales the element to 100% the width of the reference element.
 `reference` | string | parent  | Selector to the reference element (text will scale relative to this element's width).
 `styles`    | string | ''      | Space-separated list of CSS properties to scale in addition to font-size.
 
