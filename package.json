@@ -1,14 +1,14 @@
 {
   "name": "scalem",
-  "title": "jQuery Scalem",
   "version": "1.0.5",
   "description": "A lightweight jQuery plugin to make any element scalable (responsive).",
   "keywords": [
     "jquery-plugin",
+    "jquery scalem",
+    "fluid text",
     "liquid",
     "responsive",
-    "scalable",
-    "fluid-text"
+    "scalable"
   ],
   "homepage": "http://thdoan.github.io/scalem/",
   "bugs": {

@@ -11,11 +11,12 @@
     "README.md"
   ],
   "keywords": [
-    "jquery-plugin",
+    "jquery plugin",
+    "jquery scalem",
+    "fluid text",
     "liquid",
     "responsive",
-    "scalable",
-    "fluid-text"
+    "scalable"
   ],
   "authors": [
     "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com/)"
