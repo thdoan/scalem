@@ -1,14 +1,12 @@
-Scalem JS
-=========
+# Scalem JS
 
 Scalem, short for __scale elements__ or slang for __scale 'em__, is a light-weight responsive text jQuery plugin inspired by [FlowType](http://simplefocus.com/flowtype/). Use it to "liquify" elements on your website so that they scale relative to the width of their parent element or, optionally, any element you specify (see Options below). Scalem is not just limited to text size&mdash;it can be used to scale any CSS style that takes a numeric unit such as px, em, or %.
 
-__UPDATE:__ You can now install Scalem through the npm package manager by issuing the command `npm install scalem`.
+### [See a demo &raquo;](http://thdoan.github.io/scalem/demo.html)
 
-Options
--------
+## Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-scale-`, as in `data-scale-ratio="1"`.
+Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name to `data-scale-`, as in `data-scale-ratio="1"`.
 
 Name        | Type   | Default | Description
 ----------- | ------ | ------- | -----------
@@ -17,8 +15,7 @@ Name        | Type   | Default | Description
 `styles`    | string | ''      | Space-separated list of CSS properties to scale in addition to font-size.
 
 
-Usage
------
+## Usage
 
 ```html
 <body>
@@ -48,4 +45,11 @@ $(document).ready(function() {
 </body>
 ```
 
-[__See a demo &raquo;__](http://thdoan.github.io/scalem/demo.html)
+## Installation
+
+Choose one of the following methods:
+
+- Clone this repo
+- Download from http://thdoan.github.io/scalem/
+- `bower install scalem`
+- `npm install scalem`
