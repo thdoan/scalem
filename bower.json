@@ -1,10 +1,10 @@
 {
   "name": "scalem",
   "description": "A lightweight jQuery plugin to make any element scalable (responsive).",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/jquery.scalem.js",
   "license": "MIT",
-  ignore: [
+  "ignore": [
     "**/*"
   ],
   "keywords": [
