@@ -1,5 +1,5 @@
 /*!
-* Scalem v1.0.6 - A responsive text jQuery plugin
+* Scalem v1.1.0 - A responsive text jQuery plugin
 * Copyright 2014, Tom Doan (http://www.tohodo.com/)
 *
 * Scalem by Tom Doan is licensed under the MIT License.
@@ -63,7 +63,7 @@
             oStyles = {};
           for (var i=0, imax=aStyles.length; i<imax; i++) {
             if (!aStyles[i]) continue;
-            oStyles[aStyles[i]] = Math.round(parseFloat($o.css(aStyles[i])) * nScale) + 'px';
+            oStyles[aStyles[i]] = ((aStyles[i]==='width') ? nTargetWidth : Math.round(parseFloat($o.css(aStyles[i])) * nScale)) + 'px';
           }
           $o.css(oStyles);
         }
