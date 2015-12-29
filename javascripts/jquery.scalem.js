@@ -1,11 +1,11 @@
 /*!
-* Scalem v1.2.0 - A responsive text jQuery plugin
-* Copyright 2014, Tom Doan (http://www.tohodo.com/)
-*
-* Scalem by Tom Doan is licensed under the MIT License.
-* Read a copy of the license in the LICENSE file or at
-* http://choosealicense.com/licenses/mit
-*/
+ * Scalem v1.2.0 - A responsive text jQuery plugin
+ * Copyright 2014, Tom Doan (http://www.tohodo.com/)
+ *
+ * Scalem by Tom Doan is licensed under the MIT License.
+ * Read a copy of the license in the LICENSE file or at
+ * http://choosealicense.com/licenses/mit
+ */
 
 (function($) {
   $.fn.scalem = function(oOptions) {
