@@ -4,6 +4,8 @@ Scalem, short for __scale elements__ or slang for __scale 'em__, is a light-weig
 
 ### [See a demo &raquo;](http://thdoan.github.io/scalem/demo.html)
 
+__NOTE: With increased support for the `[vw](https://css-tricks.com/viewport-sized-typography/)` CSS3 property in modern browsers, this plugin should be phased out with `vw`.__
+
 ## Options
 
 Options can be passed via data attributes or JavaScript (see Usage below). For data attributes, append the option name after "data-scale-", for example `data-scale-ratio="0.5"`.
