@@ -19,9 +19,9 @@
     "scalable"
   ],
   "authors": [
-    "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com/)"
+    "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com)"
   ],
-  "homepage": "http://thdoan.github.io/scalem/",
+  "homepage": "https://thdoan.github.io/scalem/",
   "repository": {
     "type": "git",
     "url": "git://github.com/thdoan/scalem.git"

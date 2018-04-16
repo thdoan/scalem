@@ -10,12 +10,12 @@
     "responsive",
     "scalable"
   ],
-  "homepage": "http://thdoan.github.io/scalem/",
+  "homepage": "https://thdoan.github.io/scalem/",
   "bugs": {
     "url": "https://github.com/thdoan/scalem/issues"
   },
   "license": "MIT",
-  "author": "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com/)",
+  "author": "Tom Doan <thdoan@gmail.com> (http://www.tohodo.com)",
   "main": "dist/jquery.scalem.js",
   "dependencies": {
     "jquery": ">=1.7.0"
